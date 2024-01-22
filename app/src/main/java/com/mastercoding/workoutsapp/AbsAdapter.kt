@@ -34,8 +34,12 @@ class AbsAdapter(private val context: Context, private val data: ArrayList<AbsDa
         holder.itemView.setOnClickListener {
                     val intent = Intent(context, AbsActivity::class.java)
                     intent.putExtra("key",item.name)
+                    intent.putExtra("videolink", item.youtubeVideoLink)
+                    intent.putExtra("nameReps", item.nameReps)
+                    intent.putExtra("details", item.details)
+                    intent.putExtra("focusAreas", item.focusAreas)
+                    intent.putExtra("animationView", item.animationView)
                     context.startActivity(intent)
-
         }
     }
 
